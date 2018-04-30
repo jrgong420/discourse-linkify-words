@@ -34,6 +34,7 @@
       var link = document.createElement('a');
       link.innerHTML = text;
       link.href = href;
+      link.target = '_blank';
       link.className = 'linkify-word no-track-link';
       return link;
   };
