@@ -26,7 +26,7 @@
   let keys = Object.keys(words).sort((x,y) => y.length - x.length);
 
   let escapedWords = "((" + keys.map(w => escapeRegExp(w)).join(")|(") + "))";
-  let regex = new RegExp("(\\s|^)+" + escapedWords + "(([:.;,]+(\\s|$))|\\s|$)", "ig");
+  let regex = new RegExp("(\\b)" + escapedWords + "(\\b)", "ig");
 
   let createLink = function(text) {
       let lower = text.toLowerCase();
